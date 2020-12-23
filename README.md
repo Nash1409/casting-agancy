@@ -60,19 +60,30 @@ python manage.py db upgrade
 The API has three diffrent users:
 
 1) Casting Assistant
+
     email: ca@mm.com
     password: 123456Nn
+    
     Role: 
+
         Casting Assistan
+
     Permissions:
+
         get:movies
         get:actors
+
 2) Casting Director
+
     email: cd@mm.com
     password: 123456Cd
+
     Role: 
+
         Casting Director
+
     Permissions:
+
         get:movies
         patch:actors
         patch:movies
@@ -80,11 +91,16 @@ The API has three diffrent users:
         get:actors
         delete:actors
 3) Executive Producer
+
     email: ED@mm.com
     password: 123456Ed
+
     Role: 
+
         Executive Producer
+
     Permissions:
+
         get:movies
         get:actors
         patch:actors
@@ -93,9 +109,6 @@ The API has three diffrent users:
         post:movies
         delete:actors
         delete:movies
-
-
-
 
 
 ### Endpoints
@@ -165,7 +178,6 @@ GET '/actors'
     "success": true
 }
 
-```
 POST '/movies'
 - Create new movie which required some filds like title, release_date.  
 - Request Arguments: title, release_date
@@ -245,6 +257,7 @@ PATCH '/actors/<int:actor_id>'
 
 
 ### Test
+
 To run the tests, run
 
 dropdb agancy_test
@@ -254,5 +267,6 @@ run python3 test_app.py
 
 
 ## DEPLOYMENT
+
 The app is hosted live on heroku at the URL: 
 https://casting-agancy.herokuapp.com
